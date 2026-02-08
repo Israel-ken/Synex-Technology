@@ -1,0 +1,84 @@
+:root{
+  --deep-blue:#071A52;
+  --electric-purple:#6C00FF;
+  --neon:#00FFC6;
+  --bg:#0b1020;
+  --muted:rgba(255,255,255,0.7);
+  --glass:rgba(255,255,255,0.04);
+  --radius:12px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#05061a);color:#eaf2ff}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+.site-header{position:sticky;top:0;background:linear-gradient(180deg,rgba(7,26,82,0.7),transparent);backdrop-filter:blur(6px);z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+.brand{font-weight:700;color:var(--neon);text-decoration:none;font-size:1.25rem}
+
+.page-title{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.page-title img{height:64px;width:64px;object-fit:contain}
+.page-title h1{margin:0;font-size:2.5rem}
+
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--muted);text-decoration:none;padding:0.5rem;border-radius:8px}
+.nav a:hover{background:var(--glass);color:#fff}
+.burger{display:none;background:transparent;border:0;color:var(--muted);font-size:1.5rem}
+
+.hero{position:relative;padding:6rem 0 5rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(600px 300px at 10% 20%, rgba(108,0,255,0.18), transparent 10%), radial-gradient(500px 400px at 90% 80%, rgba(0,255,198,0.08), transparent 20%), linear-gradient(120deg,var(--deep-blue),#0d1b3a);transform:rotate(0.01deg);filter:blur(14px);z-index:0}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
+.hero-title{font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-0.02em;color:white;margin:0}
+.hero-sub{color:var(--muted);max-width:60%}
+.hero-cta{display:flex;gap:0.75rem;margin-top:1rem}
+.btn{display:inline-block;padding:0.7rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--electric-purple),var(--neon));color:#021023}
+.btn.ghost{border:1px solid rgba(255,255,255,0.08);color:var(--muted);background:transparent}
+
+.about{padding:4rem 0}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.about-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1.25rem;border-radius:var(--radius)}
+
+.services{padding:4rem 0}
+.services-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.service-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1.25rem;border-radius:12px;text-align:left}
+.service-card .icon{font-size:2rem}
+
+.products{padding:4rem 0}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.product{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;overflow:hidden}
+.product img{width:100%;height:180px;object-fit:cover;display:block}
+.product-body{padding:1rem}
+.price{font-weight:700;color:var(--neon)}
+
+.blog{padding:4rem 0}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.post{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;overflow:hidden}
+.post img{width:100%;height:160px;object-fit:cover}
+.post-body{padding:1rem}
+
+.contact{padding:4rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem}
+.contact-form{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:12px;display:flex;flex-direction:column;gap:0.75rem}
+.contact-form label{display:flex;flex-direction:column;color:var(--muted);font-size:0.95rem}
+.contact-form input,.contact-form textarea{margin-top:0.5rem;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff}
+.contact-info{padding:1rem;background:transparent;color:var(--muted)}
+.socials a{display:inline-block;margin-right:0.5rem;color:var(--neon);text-decoration:none}
+
+.site-footer{padding:1.25rem 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+@media (max-width:900px){
+  .about-grid,.services-grid{grid-template-columns:repeat(2,1fr)}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .blog-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav{display:none}
+  .burger{display:block}
+  .hero-sub{max-width:100%}
+  .about-grid,.services-grid,.products-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+}
+
+.muted{color:var(--muted)}

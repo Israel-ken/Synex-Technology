@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="synex.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Synex Technology</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Synex Technology</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="burger" class="burger" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container contact" style="padding-top:3rem">
+    <div class="page-title">
+      <img src="assets/images/logo.png" alt="Logo">
+      <h1>Contact</h1>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form">
+        <label>Full name<input type="text" id="name" placeholder="Your name"></label>
+        <label>Email<input type="email" id="email" placeholder="your@email.com"></label>
+        <label>Message<textarea id="message" rows="6" placeholder="Tell us about your project..."></textarea></label>
+        <button class="btn primary" type="button" onclick="openWhatsApp()">Send Message</button>
+      </form>
+      <aside class="contact-info">
+        <h3>Connect with us</h3>
+        <p>Follow us on social media for updates and news.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Synex Technology — Built for the future.</p>
+    </div>
+  </footer>
+
+  <script>
+  function openWhatsApp() {
+    const name = document.getElementById('name').value || 'Customer';
+    const email = document.getElementById('email').value || '';
+    const message = document.getElementById('message').value || 'Hello';
+    const phoneNumber = '09069392231'; // REPLACE WITH YOUR WHATSAPP NUMBER (e.g., +1234567890)
+    const text = `Hi, I'm ${name} (${email}). ${message}`;
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/${phoneNumber}?text=${encoded}`, '_blank');
+  }
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

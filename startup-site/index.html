@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="synex.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Synex Technology — Innovating the Future</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Synex Technology</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="burger" class="burger" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title">Complete Tech Solutions for Your Business</h1>
+        <p class="hero-sub">CCTV Installation, Web Development, Web Design, Starlink Setup, and Enterprise Networking.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="products.html">Explore Products</a>
+          <a class="btn ghost" href="contact.html">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About Us</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Mission</h3>
+          <p>We accelerate innovation by building scalable, secure, and delightful products that matter.</p>
+        </div>
+        <div class="about-card">
+          <h3>Vision</h3>
+          <p>To be the backbone of digital transformation for modern enterprises and startups alike.</p>
+        </div>
+        <div class="about-card">
+          <h3>Our Story</h3>
+          <p>From a small team of engineers and designers, we've grown into a remote-first company shipping global products.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon">💻</div>
+          <h4>Web Development</h4>
+          <p>Modern web apps, PWAs, and frontend engineering with performance-first practices.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">☁️</div>
+          <h4>Cloud Solutions</h4>
+          <p>Infrastructure, CI/CD, and cloud architecture for resilience and scale.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon">🤖</div>
+          <h4>AI &amp; Automation</h4>
+          <p>Data-driven automation, ML integrations, and intelligent product features.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <h2>Products</h2>
+      <div class="products-grid">
+        <div class="product">
+          <img src="assets/images/cctv.svg" alt="CCTV Solution">
+          <div class="product-body">
+            <h3>Pulse CRM</h3>
+            <p class="price">$49 / month</p>
+            <p class="muted">Lightweight CRM with AI insights.</p>
+            <div class="product-actions"><a class="btn primary" href="#">Buy Now</a></div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="assets/images/webdev.svg" alt="Web Dev">
+          <div class="product-body">
+            <h3>Edge Analytics</h3>
+            <p class="price">$199 / month</p>
+            <p class="muted">Real-time analytics and dashboards.</p>
+            <div class="product-actions"><a class="btn primary" href="#">Buy Now</a></div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="assets/images/network.svg" alt="Network">
+          <div class="product-body">
+            <h3>AutoOps</h3>
+            <p class="price">$299 / month</p>
+            <p class="muted">Automated ops and monitoring for modern stacks.</p>
+            <div class="product-actions"><a class="btn primary" href="#">Buy Now</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog container">
+      <h2>Blog</h2>
+      <div class="blog-grid">
+        <article class="post">
+          <img src="assets/images/blog.svg" alt="CCTV Security">
+          <div class="post-body">
+            <h3>Designing for Scale</h3>
+            <p class="muted">Feb 1, 2026 — Product</p>
+            <p>Best practices when you need to scale fast without sacrificing quality.</p>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+        <article class="post">
+          <img src="assets/images/blog.svg" alt="Starlink Optimization">
+          <div class="post-body">
+            <h3>CI/CD for Startups</h3>
+            <p class="muted">Jan 21, 2026 — Engineering</p>
+            <p>Automation tips to ship faster with predictable releases.</p>
+            <a class="read-more" href="#">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form class="contact-form">
+          <label>Full name<input type="text" id="name" placeholder="Your name"></label>
+          <label>Email<input type="email" id="email" placeholder="your@email.com"></label>
+          <label>Message<textarea id="message" rows="6" placeholder="Tell us about your project..."></textarea></label>
+          <button class="btn primary" type="button" onclick="openWhatsApp()">Send Message</button>
+        </form>
+        <aside class="contact-info">
+          <h3>Connect with us</h3>
+          <p>Follow us on social media for updates and news.</p>
+          <div class="socials">
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="GitHub">GitHub</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Synex Technology — Built for the future.</p>
+    </div>
+  </footer>
+
+  <script>
+  function openWhatsApp() {
+    const name = document.getElementById('name').value || 'Customer';
+    const email = document.getElementById('email').value || '';
+    const message = document.getElementById('message').value || 'Hello';
+    const phoneNumber = '1234567890'; // REPLACE WITH YOUR WHATSAPP NUMBER (e.g., +1234567890)
+    const text = `Hi, I'm ${name} (${email}). ${message}`;
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/${phoneNumber}?text=${encoded}`, '_blank');
+  }
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
